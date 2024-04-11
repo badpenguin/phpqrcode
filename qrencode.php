@@ -514,7 +514,7 @@
             
             } catch (Exception $e) {
             
-                QRtools::log($outfile, $e->getMessage());
+                QRtools::log($outfile, $e->getMessage() .' in '. $e->GetFile() . ':' . $e->GetLine());
             
             }
         }

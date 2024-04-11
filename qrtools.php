@@ -109,6 +109,9 @@
                     }
                 }    
             }
+			if (defined('QR_LOG_SYSLOG') && QR_LOG_SYSLOG) {
+				syslog(LOG_ERR, '[QRTOOLS] '. $err);
+			}
         }
         
         //----------------------------------------------------------------------
